@@ -1,15 +1,21 @@
 import React from 'react';
+import CourseDetails from './CourseDetails';
+import BookDetails from './BookDetails';
+import BlogDetails from './BlogDetails';
 import './App.css';
-import ListofPlayers from './components/ListofPlayers';
-import IndianPlayers from './components/IndianPlayers';
 
 function App() {
-  const flag = false; // Change to false to test
-
   return (
-    <div className="App">
-      <h1>🏏 Cricket App</h1>
-      {flag ? <ListofPlayers /> : <IndianPlayers />}
+    <div className="app-container">
+      <div className="column">
+        <CourseDetails />
+      </div>
+      <div className="column middle">
+        <BookDetails />
+      </div>
+      <div className="column">
+        <BlogDetails />
+      </div>
     </div>
   );
 }
